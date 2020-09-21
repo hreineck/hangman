@@ -31,7 +31,7 @@ If you had a list of many possible words used in passwords, and given that most 
 
 Anyway, this strategy is still pretty garbage for the actual game.
 
-##4. Iterating through a Dictionary
+## 4. Iterating through a Dictionary
 The bot loops through all the words in dictionary, ruling out any words that:
 - Don't match the secret word's length
 - Contain any letters that have been guessed, but were wrong
