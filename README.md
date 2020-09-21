@@ -19,7 +19,7 @@ The bot can solve using four strategies, but only the last one is optimal.
 ## 1. Random Guessing
 This isn't very effective.
 
-## 2. Using a List of The Most Common Words
+## 2. Guessing the Most Frequent Letters
 I used a quick script to find the most common letter out of all the words in words.txt (https://github.com/dwyl/english-words)
 
 The bot simply guesses down the line.
@@ -31,9 +31,9 @@ Freq.c gives the most common letter at each index in the words in words.txt
 
 The bot then guesses down the line until it gets the first index right, then moves on to the next index, and so on.
 
-This strategy still isn't very good, but it's the most interesting to me because it's the most similar to password cracking, as it's agnostic of both the length of the secret word, and the letters that have already been correctly guessed.
+This strategy still isn't very good, but it's the most interesting to me because it's the most similar to password cracking, as it's agnostic of the length of the secret word.
 
-If you're brute forcing a password, you have a 1/(# of possible characters) chance of guessing the letter at any given index
+If you're brute forcing a password, you have a 1/(# of possible characters) chance of guessing the letter at any given index.
 
 A brute force algorithm that simply guesses all the letters in order will then have a worst case of n^n guesses, where n is the number of possible characters.
 
