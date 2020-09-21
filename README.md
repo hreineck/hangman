@@ -11,15 +11,15 @@ It's like password cracking, but incredibly easy.
 
 The bot can solve using four strategies, but only the last one is optimal.
 
-##1. Random Guessing
+## 1. Random Guessing
 This isn't very effective.
 
-##2. Using a List of The Most Common Words
+## 2. Using a List of The Most Common Words
 I used a quick script to find the most common letter out of all the words in words.txt (https://github.com/dwyl/english-words)
 The bot simply guesses down the line.
 It's slightly more effective than random guessing.
 
-##3. Guessing the Most Frequent Letters for each Index
+## 3. Guessing the Most Frequent Letters for each Index
 Freq.c gives the most common letter at each index in the words in words.txt
 The bot then guesses down the line until it gets the first index right, then moves on to the next index, and so on.
 
