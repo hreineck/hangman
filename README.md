@@ -55,7 +55,7 @@ Then it guesses the most frequent letter out of all of those words.
 It does really well for words that are in the dictionary. For longer words, it often gets a perfect score (# of guesses = # of unique letters in the secret word).
 
 Some limitations of this strategy:
-- It's a bit slow, because it runs through the entire list every loop. This could be remedied by having separate dictionaries for every word length, or by storing the indexes of all the valid words as you go through the dictionary.
+- It's a bit slow, because it runs through the entire list every loop. This could be remedied by having separate dictionaries for every word length, or by storing the indices of all the valid words as you go through the dictionary.
 - The dictionary contains a LOT of words, and most of them aren't very common. Because of this, the last couple guesses end up being nearly random, since it ususally finds five or six words with all but one of their letters exactly the same. This could be fixed by building up data for the usage of all the words in the dictionary and using that to break ties (this would also be useful for strategy 3.)
 - It does really poorly against words that aren't in the dictionary, because once it runs out of possible words, it starts guessing randomly from A-Z. You could supplement this with strategy 3 to make it a bit better.
 - It's still useless against random strings, but that can't be helped.
