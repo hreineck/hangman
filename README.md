@@ -35,9 +35,9 @@ This strategy still isn't very good, but it's the most interesting to me because
 
 If you're brute forcing a password, you have a 1/(# of possible characters) chance of guessing the letter at any given index.
 
-A brute force algorithm that simply guesses all the letters in order will then have a worst case of n^n guesses, where n is the number of possible characters.
+A brute force algorithm that simply guesses all the letters in order will then have a worst case of n^m guesses, where n is the number of possible characters, and m is the length of the word.
 
-However, if you happen to guess the first letter correct, you reduce the number of guesses you need to (n-1)^(n-1)
+However, if you happen to guess the first letter correct, you reduce the number of guesses you need to n^(m-1), which is significant for values of m that are long enough not to be trivial.
 
 If you had a list of many possible words used in passwords, and given that most (non-random) passwords start with letters, you could potentially reduce the time by guessing the 
 most common letters first at each index.
