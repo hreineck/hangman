@@ -33,7 +33,7 @@ The bot then guesses down the line until it gets the first index right, then mov
 
 This strategy still isn't very good, but it's the most interesting to me because it's the most similar to password cracking, as it deals with guessing each index of the secret word correctly and is agnostic of the length of the word.
 
-If you're brute forcing a password, you have a 1/(# of possible characters) chance of guessing the letter at any given index.
+If you're guessing a word by each index from left to right, you have a 1/(# of possible characters) chance of guessing the letter at any given index.
 
 A brute force algorithm that simply guesses all the letters in order will then have a worst case of n^m guesses, where n is the number of possible characters, and m is the length of the word.
 
