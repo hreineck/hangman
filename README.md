@@ -31,7 +31,7 @@ Freq.c gives the most common letter at each index in the words in words.txt
 
 The bot then guesses down the line until it gets the first index right, then moves on to the next index, and so on.
 
-This strategy still isn't very good, but it's the most interesting to me because it's the most similar to password cracking, as it deals with guessing each index of the secret word correctly and is agnostic of the length of the word.
+This strategy still isn't very good, but it's the most interesting to me because it's the most similar to brute forcing a password, as it deals with guessing each index of the secret word correctly and is agnostic of the length of the word.
 
 If you're guessing a word by each index from left to right, you have a 1/(# of possible characters) chance of guessing the letter at any given index.
 
