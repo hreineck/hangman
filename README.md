@@ -31,21 +31,20 @@ Freq.c gives the most common letter at each index in the words in words.txt
 
 The bot then guesses down the line until it gets the first index right, then moves on to the next index, and so on.
 
-This strategy still isn't very good, but it's the most interesting to me because it's the most similar to brute forcing a password, as it deals with guessing each index of the secret word correctly and is agnostic of the length of the word.
+This strategy still isn't very good, but it's the most interesting to me because it's agnostic of the length of the word and the letters previously guessed.
 
-If you're guessing a word by each index from left to right, you have a 1/(# of possible characters) chance of guessing the letter at any given index.
+The idea behing this one is that if you're guessing a word by each index from left to right, you have a 1/(# of possible characters) chance of guessing the letter at any given index.
 
 A brute force algorithm that simply guesses all the letters in order will then have a worst case of n^m guesses, where n is the number of possible characters, and m is the length of the word.
 
 However, if you happen to guess the first letter correct, you reduce the number of guesses you need to n^(m-1), which is significant for values of m that are long enough not to be trivial.
 
-If you had a list of many possible words used in passwords, and given that most (non-random) passwords start with letters, you could potentially reduce the time by guessing the 
-most common letters first at each index.
+With a list of the most common words, you can potentially reduce the time by guessing the most common letters first at each index.
 
-Anyway, this strategy is still pretty garbage for the actual game.
+Anyway, this strategy is still not very good.
 
 ## 4. Iterating through a Dictionary
-The bot loops through all the words in dictionary, ruling out any words that:
+The program loops through all the words in dictionary, ruling out any words that:
 - Don't match the secret word's length
 - Contain any letters that have been guessed, but were wrong
 - Don't contain the letters in the correct indexes that are known to be in the word
